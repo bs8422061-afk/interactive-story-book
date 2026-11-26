@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose your adventure! Explore magical forests, journey through space, or dive into the ocean.">
+    <title>Story Adventure 🌟 - Choose Your Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-menu">
+    <div class="bg-animated"></div>
+    <div class="particles" id="particles-menu"></div>
+
+    <!-- Floating clouds -->
+    <div class="cloud" style="top: 8%; left: 5%; width: 180px;"></div>
+    <div class="cloud" style="top: 22%; right: 8%; animation-delay: -4s; width: 220px;"></div>
+    <div class="cloud" style="bottom: 15%; left: 20%; animation-delay: -8s; width: 150px;"></div>
+
+    <div class="menu-header" id="menu-header">
+        <h1 id="menu-title">Story Adventure 🌟</h1>
+        <p class="menu-subtitle">Where would you like to go today?</p>
+    </div>
+
+    <div class="story-container" id="story-container">
+        <!-- Forest Card -->
+        <div class="story-card forest-card" onclick="goToStory('forest')" id="card-forest">
+            <div class="card-glow forest-glow"></div>
+            <div class="story-icon">🌲</div>
+            <h2>The Magic Forest</h2>
+            <p class="card-description">Explore the whispering woods and find the Golden Carrot with Barnaby the Bunny!</p>
+            <div class="card-footer">
+                <span class="card-badge"><i class="fas fa-book-open"></i> 7 pages</span>
+                <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <!-- Space Card -->
+        <div class="story-card space-card" onclick="goToStory('space')" id="card-space">
+            <div class="card-glow space-glow"></div>
+            <div class="story-icon">🚀</div>
+            <h2>Galaxy Quest</h2>
+            <p class="card-description">Blast off into the stars with Commander Starlight and meet friendly robots!</p>
+            <div class="card-footer">
+                <span class="card-badge"><i class="fas fa-book-open"></i> 7 pages</span>
+                <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <!-- Ocean Card -->
+        <div class="story-card ocean-card" onclick="goToStory('ocean')" id="card-ocean">
+            <div class="card-glow ocean-glow"></div>
+            <div class="story-icon">🌊</div>
+            <h2>Deep Sea Discovery</h2>
+            <p class="card-description">Dive deep beneath the waves with Finny the Fish and discover treasure!</p>
+            <div class="card-footer">
+                <span class="card-badge"><i class="fas fa-book-open"></i> 7 pages</span>
+                <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <!-- Superhero Card -->
+        <div class="story-card superhero-card" onclick="goToStory('superhero')" id="card-superhero">
+            <div class="card-glow superhero-glow"></div>
+            <div class="story-icon">🦸</div>
+            <h2>The City Hero</h2>
+            <p class="card-description">Discover your powers and save the city from a giant robot attack!</p>
+            <div class="card-footer">
+                <span class="card-badge"><i class="fas fa-book-open"></i> 7 pages</span>
+                <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <!-- Jungle Card -->
+        <div class="story-card jungle-card" onclick="goToStory('jungle')" id="card-jungle">
+            <div class="card-glow jungle-glow"></div>
+            <div class="story-icon">🐒</div>
+            <h2>Jungle Adventure</h2>
+            <p class="card-description">Join Milo the Monkey on a quest for the legendary emerald waterfall!</p>
+            <div class="card-footer">
+                <span class="card-badge"><i class="fas fa-book-open"></i> 7 pages</span>
+                <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="menu-footer">
+        <p>Made with 💖 for little adventurers</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (!sessionStorage.getItem('user')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

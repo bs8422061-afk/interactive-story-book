@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enjoy an interactive animated story with voice narration. A magical reading experience for children.">
+    <title>Magic Stories - Reading...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-story">
+    <!-- Dynamic background set by JS based on story theme -->
+    <div class="story-bg-overlay" id="story-bg-overlay"></div>
+    <div class="particles" id="particles-story"></div>
+
+    <div class="story-page">
+        <!-- Header -->
+        <div class="story-header" id="story-header">
+            <button class="btn btn-back" onclick="exitStory()" id="btn-back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <h2 id="story-title" class="story-title-text">Loading...</h2>
+            <div class="story-progress-wrapper">
+                <div class="story-progress-bar" id="story-progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Main Story Content -->
+        <div class="story-content" id="story-content">
+            <div class="character-stage" id="character-stage">
+                <!-- Character icon injected by JS -->
+            </div>
+            <div class="text-box" id="story-text">Loading magic words...</div>
+            <div class="line-counter" id="line-counter"></div>
+        </div>
+
+        <!-- Controls Bar -->
+        <div class="controls" id="controls-bar">
+            <button class="ctrl-btn" onclick="togglePlay()" id="play-btn" title="Play / Pause">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="ctrl-btn" onclick="nextLine()" id="skip-btn" title="Skip to next line">
+                <i class="fas fa-forward-step"></i>
+            </button>
+            <div class="volume-control">
+                <button class="ctrl-btn" onclick="toggleMute()" id="mute-btn" title="Mute / Unmute">
+                    <i class="fas fa-volume-high"></i>
+                </button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.8" class="volume-slider" oninput="changeVolume(this.value)">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

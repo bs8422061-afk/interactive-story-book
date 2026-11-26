@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Magic Stories - An interactive storytelling adventure for kids. Login to explore magical worlds!">
+    <title>Magic Stories ✨ - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-login">
+    <div class="bg-animated"></div>
+    <div class="particles" id="particles-login"></div>
+
+    <!-- Floating decorative elements -->
+    <div class="floating-decoration">
+        <span class="float-emoji" style="top:10%;left:8%;animation-delay:0s;">⭐</span>
+        <span class="float-emoji" style="top:20%;right:12%;animation-delay:1.2s;">🌙</span>
+        <span class="float-emoji" style="bottom:25%;left:15%;animation-delay:0.6s;">✨</span>
+        <span class="float-emoji" style="top:60%;right:8%;animation-delay:1.8s;">🪄</span>
+        <span class="float-emoji" style="bottom:10%;right:20%;animation-delay:2.4s;">💫</span>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-card" id="login-card">
+            <div class="login-icon-wrapper">
+                <div class="login-icon">📖</div>
+            </div>
+            <h1 id="login-title">Magic Stories</h1>
+            <p class="login-subtitle">Enter the magical world of stories!</p>
+            <form id="login-form" autocomplete="off">
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="username" placeholder="Username" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Password" required autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-login" id="login-btn">
+                    <span class="btn-text">Enter World</span>
+                    <i class="fas fa-wand-magic-sparkles btn-icon"></i>
+                </button>
+            </form>
+            <div id="error-msg"></div>
+            <p class="login-hint">Hint: username <b>kid</b> / password <b>magic</b></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
